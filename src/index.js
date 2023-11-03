@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import App from "./App";
+import "../node_modules/antd/dist/antd";
 
 ReactDOM.render(
   <Router>
