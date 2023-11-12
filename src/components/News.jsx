@@ -3,6 +3,7 @@ import { Select, Typography, Row, Col, Avatar, Card } from "antd";
 import moment from "moment/moment";
 import { useGetCryptoNewsQuery } from "../services/cryptoNewsApi";
 import { useGetCryptosQuery } from "../services/cryptoApi";
+import Loader from "./Loader";
 
 const { Text, Title } = Typography;
 const { Option } = Select;
@@ -18,12 +19,11 @@ const News = ({ simplified }) => {
   const { data } = useGetCryptosQuery(100);
 
   if (!cryptoNews?.data) {
-    return "Loading...";
+    return <Loader />;
   } else {
     const slicedNews = simplified
       ? Object.entries(cryptoNews.data).slice(0, 6)
       : Object.entries(cryptoNews.data).slice(0, 12);
-    console.log(slicedNews);
 
     return (
       <Row gutter={[24, 24]}>
