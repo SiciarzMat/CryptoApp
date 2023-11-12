@@ -311,6 +311,7 @@ a:hover {
 .provider-container {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 .provider-name {
   margin-left: 10px;

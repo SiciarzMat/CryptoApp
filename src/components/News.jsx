@@ -13,7 +13,7 @@ const demoImage =
 const News = ({ simplified }) => {
   const [newsCategory, setnewsCategory] = useState("Cryptocurrency");
   const { data: cryptoNews } = useGetCryptoNewsQuery({
-    newsCategory: "Cryptocurrency",
+    newsCategory,
   });
   const { data } = useGetCryptosQuery(100);
 
@@ -52,22 +52,29 @@ const News = ({ simplified }) => {
               <a href={news[1].url} target="_blank" rel="noreferrer">
                 <div className="news-image-container">
                   <Title className="news-title" level={4}>
-                    {news[1].title}
+                    {news[1].title.length > 70
+                      ? `${news[1].title.substring(0, 70)}...`
+                      : news[1].title}
                   </Title>
                   <img
-                    style={{ maxWidth: "150px", maxHeight: "150px" }}
+                    style={{ maxWidth: "150px", maxHeight: "100px" }}
                     src={news[1]?.photo_url || demoImage}
                     alt="News"
                   />
                 </div>
                 <div className="provider-container">
                   <div>
-                    <Text>
-                      {moment(news[1].published_datetime_utc)
-                        .startOf("ss")
-                        .fromNow()}
-                    </Text>
+                    <Avatar
+                      src={news[1].source_favicon_url || demoImage}
+                      alt="news"
+                    />
+                    <Text className="provider-name">{news[1].source_url}</Text>
                   </div>
+                  <Text>
+                    {moment(news[1].published_datetime_utc)
+                      .startOf("ss")
+                      .fromNow()}
+                  </Text>
                 </div>
               </a>
             </Card>
