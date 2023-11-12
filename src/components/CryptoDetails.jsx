@@ -40,8 +40,6 @@ const CryptoDetails = () => {
 
   const volume = cryptoDetails[Object.keys(cryptoDetails)[11]];
 
-  console.log(coinHistory);
-
   const stats = [
     {
       title: "Price to USD",
