@@ -290,7 +290,7 @@ a:hover {
   width: 180px;
 }
 .news-card {
-  min-height: 300px !important;
+  min-height: 200px !important;
 }
 .news-image-container {
   display: flex !important;
