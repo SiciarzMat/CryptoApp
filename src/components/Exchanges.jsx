@@ -4,7 +4,6 @@ import { Collapse, Row, Col, Typography, Avatar } from "antd";
 import HTMLReactParser from "html-react-parser";
 
 import { useGetCryptoExchangesQuery } from "../services/cryptoExchangesAPI";
-import { useGetCryptoExchangesImgQuery } from "../services/cryptoExchangesImgAPI";
 
 import Loader from "./Loader";
 import exchangeIcon from "../images/exchange.png";
@@ -14,24 +13,13 @@ const { Panel } = Collapse;
 
 const Exchanges = () => {
   const { data: exchangesList, isFetching } = useGetCryptoExchangesQuery();
-  const { data: exchangesImg, isLoading } = useGetCryptoExchangesImgQuery();
 
   if (isFetching) return <Loader />;
-  if (isLoading) return <Loader />;
 
   let rankList = [];
 
   for (let i = 0; i < exchangesList.length; i++) {
     if (exchangesList[i].adjusted_rank) {
-      // for (let j = 0; j < exchangesImg?.length; j++) {
-      //   if (
-      //     exchangesList[i].name === exchangesImg[j].name ||
-      //     exchangesList[i].id === exchangesImg[j].id
-      //   ) {
-      //     exchangesList[i].image = exchangesImg[j].image;
-      //   }
-      // }
-
       rankList.push(exchangesList[i]);
     }
   }
