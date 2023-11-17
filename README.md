@@ -36,8 +36,8 @@ Project is created with:
 - Redux
 - React
 - JavaScript
-- HTML 5
 - CSS3
+- HTML 5
 
 <img src="https://static-00.iconduck.com/assets.00/ant-design-icon-256x256-xqqnxs3z.png"  title="Ant Design" alt="antd" width="40" height="40"/>&nbsp;
 <img src="https://www.chartjs.org/img/chartjs-logo.svg"  title="Chart.js" alt="Chart.js" width="40" height="40"/>&nbsp;
