@@ -12,7 +12,10 @@ https://cryptoquestapp.netlify.app/
 ## General info
 
 ₿ Attention Crypto fans! ₿
-As you know, in a fast-paced world of Cryptocurrencies, staying up to date is <b>a must❗</b> Fear not, as CryptoQuest is here to help you with that. With just a few click, you will be able to:
+
+As you know, in a fast-paced world of Cryptocurrencies, staying up to date is <b>a must❗</b> Fear not, as CryptoQuest is here to help you with that.
+
+With just a few click, you will be able to:
 
 - get the most recent data from the markets 📈,
 - check the top 10 cryptocurrencies 💰,
@@ -28,6 +31,10 @@ Working on this repository helped me to develop my React skills, train Redux as 
 
 Project is created with:
 
+- Ant Design
+- Chart.js
+- Redux
+- React
 - JavaScript
 - HTML 5
 - CSS3
